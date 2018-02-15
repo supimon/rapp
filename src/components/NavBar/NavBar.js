@@ -6,7 +6,7 @@ import React, { Fragment } from 'react';
 import MainMenu from '../MainMenu/MainMenu';
 
 const navBar = props => {
-
+  // is mobile menu required ?
   let mobileMenu = '';
   if(props.responsive){
     mobileMenu = (
@@ -25,7 +25,7 @@ const navBar = props => {
           <MainMenu classes="right hide-on-med-and-down" menuItems={props.menuItems}/>
         </div>
       </nav>
-      <MainMenu classes="sidenav" id="mobile-main-menu" menuItems={props.menuItems}/>
+      { mobileMenu ? <MainMenu classes="sidenav" id="mobile-main-menu" menuItems={props.menuItems}/> : '' }
     </Fragment>
   );
 

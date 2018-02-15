@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from '../../components/NavBar/NavBar';
 
 class App extends Component {
+  // hard coded menu items
   state = {
     menus : [
       { name: "Tables", isIcon: false },
